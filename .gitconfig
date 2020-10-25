@@ -1,0 +1,27 @@
+[user]
+	name = Jeff Horn
+	email = outforaride@gmail.com
+[core]
+	editor = nvim
+[push]
+	default = simple
+
+[alias]
+    ffpull = pull --ff-only
+    lg = !"git log --graph --decorate"
+    lga = !"git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+    lgs = log --pretty=oneline --decorate
+    br = "!git --no-pager branch"
+    tg = "!git --no-pager tag"
+    pf = push --force-with-lease
+    tidy-dry = remote prune origin --dry-run
+    tidy = remote prune origin
+
+[color]
+    ui = auto
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

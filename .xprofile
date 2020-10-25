@@ -1,0 +1,6 @@
+
+xset s 3600 3600
+xset dpms 3600 3600 3600
+
+eval $(ssh-agent)
+export SSH_ASKPASS=/usr/lib/ssh/ssh-askpass

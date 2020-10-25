@@ -1,0 +1,26 @@
+{
+  "explorer.width": 30,
+  "explorer.icon.enableNerdfont": true,
+  "explorer.previewAction.onHover": false,
+  "explorer.keyMappings": {
+    "<cr>": ["expandable?", "expand", "open"],
+    "v": "open:vsplit",
+    "o": ["expanded?", "collapse", "expand"]
+  },
+
+  "languageserver": {
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "usePlaceholders": true
+      }
+    },
+    "clangd": {
+      "command": "clangd",
+      "filetypes": ["c", "cc", "c++", "cpp", "cuda", "objc", "objcpp"],
+      "rootPatterns": ["compile_commands.json"]
+    }
+  }
+}
