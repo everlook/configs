@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/home/jhorn/.oh-my-zsh"
+export EDITOR=nvim
 
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
@@ -16,7 +17,6 @@ export LANG=en_US.UTF-8
 export PATH=$HOME/.local/bin:$PATH
 
 # Rust
-#export PATH=$HOME/.cargo/bin:$PATH
 source $HOME/.cargo/env
 
 # alias

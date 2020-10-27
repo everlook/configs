@@ -14,6 +14,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'jiangmiao/auto-pairs'
     " Onedark ThemePlug 'joshdick/onedark.vim'
     Plug 'joshdick/onedark.vim'
+    " Nord Theme
+    Plug 'arcticicestudio/nord-vim'
     " Stable version of coc
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Vim status line
