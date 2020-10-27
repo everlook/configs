@@ -29,7 +29,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "0x0-50+75"
+    geometry = "0x0-30+75"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -172,12 +172,12 @@
     min_icon_size = 0
 
     # Scale larger icons down to this size, set to 0 to disable
-    max_icon_size = 32
+    max_icon_size = 0
 
     # Paths to default icons.
     # /usr/share/icons/Arc/devices
     #icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
-    icon_path = /usr/share/icons/Arc/status/32:/usr/share/icons/Arc/devices/32
+    icon_path = /usr/share/icons/Arc/status/48:/usr/share/icons/Arc/devices/48
 
     ### History ###
 
