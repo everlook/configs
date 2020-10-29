@@ -1,0 +1,4 @@
+configuration {
+  font: "Hack Nerd font 14";
+	theme: "~/.config/rofi/base16-nord";
+}
