@@ -1,6 +1,7 @@
 
-xset s noblank
+xset s off
 xset -dpms
 
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 eval $(ssh-agent)
 export SSH_ASKPASS=/usr/lib/ssh/ssh-askpass
