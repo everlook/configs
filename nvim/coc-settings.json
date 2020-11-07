@@ -16,11 +16,6 @@
       "initializationOptions": {
         "usePlaceholders": true
       }
-    },
-    "clangd": {
-      "command": "clangd",
-      "filetypes": ["c", "cc", "c++", "cpp", "cuda", "objc", "objcpp"],
-      "rootPatterns": ["compile_commands.json"]
     }
   }
 }
