@@ -50,9 +50,9 @@ alert = #bd2c40
 ################################################################################
 
 [bar/bspwm]
-monitor = ${env:MONITOR:HDMI-0}
+monitor = ${env:MONITOR:eDP1}
 width = 100%
-height = 45
+height = 30
 dpi = 0
 ;offset-x = 1%
 ;offset-y = 1%
@@ -74,14 +74,14 @@ padding-right = 1
 module-margin-left = 0
 module-margin-right = 2
 
-font-0 = Hack Nerd Font:size=9
+font-0 = Hack Nerd Font:size=10
 font-1 = fixed:pixelsize=12;1
 font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-3 = siji:pixelsize=10;1
 
 modules-left = bspwm 
 modules-center = 
-modules-right = networkspeedup networkspeeddown pulseaudio memory cpu eth date
+modules-right = networkspeedup networkspeeddown battery pulseaudio memory cpu eth date
 
 tray-position = right
 tray-padding = 2
@@ -379,13 +379,13 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 [module/battery]
 type = internal/battery
 battery = BAT0
-adapter = ADP1
+adapter = AC
 full-at = 98
 
-format-charging = <animation-charging> <label-charging>
+format-charging = <label-charging>
 format-charging-underline = #ffb52a
 
-format-discharging = <animation-discharging> <label-discharging>
+format-discharging =  <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
 format-full-prefix = " "
@@ -453,7 +453,7 @@ type = internal/network
 ;interface = wlp3s0
 ;interface = enp14s0
 ;interface = enp0s31f6
-interface = enp8s0
+interface = wlan0
 label-connected = "%upspeed:7%"
 format-connected = <label-connected>
 format-connected-underline = ${colors.background-alt}
@@ -470,7 +470,7 @@ type = internal/network
 ;interface = wlp3s0
 ;interface = enp14s0
 ;interface = enp0s31f6
-interface = enp8s0
+interface = wlan0
 label-connected = "%downspeed:7%"
 format-connected = <label-connected>
 format-connected-underline = ${colors.background-alt}

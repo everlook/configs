@@ -165,7 +165,7 @@ font:
     family: "Hack Nerd Font"
     style: Bold Italic
   
-  size: 10
+  size: 8
 
 background_opacity: 0.95
 
