@@ -1,0 +1,5 @@
+.include /etc/pulse/default.pa
+
+set-default-source alsa_input.usb-0b0e_Jabra_Link_370_3050750246EE-00.mono-fallback
+set-default-sink alsa_output.usb-0b0e_Jabra_Link_370_3050750246EE-00.analog-stereo
+
