@@ -33,7 +33,7 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 set colorcolumn=100                     " add vertical lines on columns
 
 " set python provider
-let g:python3_host_prog='/usr/bin/python'
+let g:python3_host_prog='/usr/bin/python3'
 let g:loaded_python_provider=0
 
 highlight ColorColumn ctermbg=lightgrey

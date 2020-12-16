@@ -19,6 +19,12 @@ export PATH=$HOME/.local/bin:$PATH
 # Rust
 source $HOME/.cargo/env
 
+# Node
+export PATH=$HOME/node/bin:$PATH
+
+# Go
+export PATH=$HOME/go/bin:$PATH
+
 # alias
 alias cls=clear
 
@@ -28,8 +34,5 @@ unsetopt share_history
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
 [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
-
-# git config alias
-alias cfg='/usr/bin/git --git-dir=$HOME/configs/ --work-tree=$HOME'
 
 neofetch
