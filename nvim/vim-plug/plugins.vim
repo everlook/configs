@@ -37,7 +37,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Symbol / tag viewer
     Plug 'liuchengxu/vista.vim' 
     " Rust support
-    Plug 'rust-lang/rust.vim'
+    " Plug 'rust-lang/rust.vim'
     " Fuzzy finder
     Plug 'airblade/vim-rooter'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
