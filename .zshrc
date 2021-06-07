@@ -3,7 +3,7 @@ export ZSH="/home/jhorn/.oh-my-zsh"
 export EDITOR=nvim
 
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="gentoo"
 
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git golang docker docker-compose node npm sudo tmux rust cargo fzf)
