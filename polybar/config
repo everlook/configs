@@ -393,7 +393,10 @@ format-discharging-foreground = ${colors.background-alt}
 ; Available tokens:
 ;   %percentage% (default) - is set to 100 if full-at is reached
 ;   %percentage_raw%
-label-full = Fully charged
+label-full = " "
+format-full-foreground = ${colors.background-alt}
+
+;label-full = Fully charged
 
 ;format-full-prefix = " "
 ;format-full-prefix-foreground = ${colors.foreground-alt}
