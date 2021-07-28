@@ -13,7 +13,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Auto pairs for '(' '[' '{' 
     Plug 'jiangmiao/auto-pairs'
     " Onedark ThemePlug 'joshdick/onedark.vim'
-    Plug 'joshdick/onedark.vim'
+    Plug 'joshdick/onedark.vim', {'branch': 'main'}
     " Nord Theme
     Plug 'arcticicestudio/nord-vim'
     " Stable version of coc
