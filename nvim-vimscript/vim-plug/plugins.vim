@@ -48,5 +48,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'sbdchd/neoformat'
     " ctags support
     Plug 'ludovicchabant/vim-gutentags'
+    " salt config
+    Plug 'saltstack/salt-vim'
 
 call plug#end()

@@ -125,7 +125,7 @@ font:
     family: "Hack Nerd Font"
     style: Bold Italic
   
-  size: 10
+  size: 12
 
 # Live config reload (changes require restart)
 live_config_reload: true
