@@ -2,11 +2,11 @@
 export ZSH="/Users/jhorn/.oh-my-zsh"
 
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="gentoo"
 ZSH_DISABLE_COMPFIX=true
 
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git golang docker docker-compose node npm sudo tmux rust cargo fzf)
+plugins=(git golang docker docker-compose sudo tmux rust cargo fzf kubectl ripgrep vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -14,7 +14,7 @@ source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 
 # Add $HOME/.local/bin to the path
-export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH:/usr/local/sbin
 
 # Golang
 export GOPATH=$HOME/go
@@ -27,7 +27,7 @@ export PATH="$(yarn global bin):$PATH"
 source $HOME/.cargo/env
 
 # add llvm for clang tools
-export PATH="/usr/local/opt/llvm/bin:$PATH"
+#export PATH="/usr/local/opt/llvm/bin:$PATH"
 
 # alias
 alias cls=clear
@@ -37,3 +37,5 @@ alias tree='tree -C'
 unsetopt share_history
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+neofetch
