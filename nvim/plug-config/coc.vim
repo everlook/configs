@@ -9,7 +9,7 @@
      \ 'coc-xml',
      \ 'coc-yank',
      \ 'coc-json',
-     \ 'coc-rust-analyzer',
+     \ 'coc-rls',
      \ 'coc-clangd',
      \ ]
 
