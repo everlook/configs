@@ -1,12 +1,12 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/jhorn/.oh-my-zsh"
+export ZSH="/Users/jehorn/.oh-my-zsh"
 
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="gentoo"
 ZSH_DISABLE_COMPFIX=true
 
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git golang docker docker-compose sudo tmux rust cargo fzf kubectl ripgrep vagrant)
+plugins=(git golang docker docker-compose sudo tmux rust fzf kubectl ripgrep vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -33,9 +33,25 @@ source $HOME/.cargo/env
 alias cls=clear
 alias tree='tree -C'
 
+# tess
+alias ksc='kubectl config use-context'
+#alias tk='tess kubectl'
+alias tk19='tess kubectl --context=19'
+alias tk32='tess kubectl --context=32'
+alias tk93='tess kubectl --context=93'
+alias tk130='tess kubectl --context=130'
+alias tk119='tess kubectl --context=119'
+alias jm='ssh -J jehorn@lvsbastion100.lvs.ebay.com'
+
 # don't share history
 unsetopt share_history
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 neofetch
+# Setting NodeJS Extra CA Path
+export NODE_EXTRA_CA_CERTS="/Library/Application Support/Netskope/STAgent/download/nscacert.pem"
+# Setting Python Requests Extra CA Path
+export REQUESTS_CA_BUNDLE="/Library/Application Support/Netskope/STAgent/download/nscacert_combined.pem"
+
+eval "$(starship init zsh)"
