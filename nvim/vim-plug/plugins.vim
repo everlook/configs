@@ -14,8 +14,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'jiangmiao/auto-pairs'
     " Onedark ThemePlug 'joshdick/onedark.vim'
     Plug 'joshdick/onedark.vim', {'branch': 'main'}
-    " kanagawa color scheme
-    Plug 'https://github.com/rebelot/kanagawa.nvim'
     " Nord Theme
     Plug 'arcticicestudio/nord-vim'
     " Stable version of coc
@@ -38,6 +36,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'rhysd/git-messenger.vim'
     " Symbol / tag viewer
     Plug 'liuchengxu/vista.vim' 
+    " Rust support
+    " Plug 'rust-lang/rust.vim'
     " Fuzzy finder
     Plug 'airblade/vim-rooter'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
