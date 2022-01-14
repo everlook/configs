@@ -6,7 +6,7 @@ export EDITOR=nvim
 ZSH_THEME="gentoo"
 
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git golang docker docker-compose node npm sudo tmux rust cargo fzf)
+plugins=(git golang docker docker-compose node npm sudo tmux rust fzf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -36,3 +36,5 @@ unsetopt share_history
 [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 
 neofetch
+
+eval "$(starship init zsh)"
