@@ -27,6 +27,7 @@ export PATH=$HOME/go/bin:$PATH
 
 # alias
 alias cls=clear
+alias startx='ssh-agent startx'
 
 # don't share history
 unsetopt share_history
