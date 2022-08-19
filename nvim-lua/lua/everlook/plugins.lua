@@ -1,9 +1,10 @@
 -- automatically install packer
 local fn = vim.fn
-local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-  vim.cmd [[packadd packer.nvim]]
+    packer_bootstrap = fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim',
+        install_path })
+    vim.cmd [[packadd packer.nvim]]
 end
 
 -- automatically run :PackerCompile whenever plugins.lua is updated with an autocommand:
@@ -16,16 +17,16 @@ vim.api.nvim_create_autocmd('BufWritePost', {
 -- use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, 'packer')
 if not status_ok then
-  return
+    return
 end
 
 -- have packer use a popup window
 packer.init {
-  display = {
-    open_fn = function()
-      return require('packer.util').float { border = 'rounded' }
-    end,
-  },
+    display = {
+        open_fn = function()
+            return require('packer.util').float { border = 'rounded' }
+        end,
+    },
 }
 
 return require('packer').startup({
@@ -35,10 +36,10 @@ return require('packer').startup({
 
         -- used by many plugins
         use('nvim-lua/plenary.nvim')
-        
+
         -- an implementation of the Popup API from vim in Neovim
         use('nvim-lua/popup.nvim')
-        
+
         -- git
         use({
             'lewis6991/gitsigns.nvim',
@@ -79,7 +80,7 @@ return require('packer').startup({
         })
 
         use({
-            'akinsho/bufferline.nvim', 
+            'akinsho/bufferline.nvim',
             tag = "v2.*",
             config = function()
                 require('everlook.plugins.bufferline')
@@ -105,8 +106,8 @@ return require('packer').startup({
         })
 
         use({
-	        'windwp/nvim-autopairs',
-            config = function() 
+            'windwp/nvim-autopairs',
+            config = function()
                 require("nvim-autopairs").setup()
             end,
         })
@@ -138,21 +139,27 @@ return require('packer').startup({
                 require('everlook.plugins.lsp')
             end,
         })
-        
+
         use({
             'hrsh7th/nvim-cmp',
             config = function()
                 require('everlook.plugins.lsp.cmp')
             end,
         })
-        use({'hrsh7th/cmp-nvim-lsp'})
-        use({'hrsh7th/cmp-buffer'})
-        use({'hrsh7th/cmp-path'})
-        use({'L3MON4D3/LuaSnip'})
-        use({'williamboman/nvim-lsp-installer'})
+        use({ 'hrsh7th/cmp-nvim-lsp' })
+        use({ 'hrsh7th/cmp-buffer' })
+        use({ 'hrsh7th/cmp-path' })
+        use({ 'L3MON4D3/LuaSnip' })
+        use({ 'williamboman/nvim-lsp-installer' })
+        use({
+            'jose-elias-alvarez/null-ls.nvim',
+            config = function()
+                require('everlook.plugins.null-ls')
+            end,
+        })
 
         -- language support
-    
+
         if packer_bootstrap then
             require('packer').sync()
         end
