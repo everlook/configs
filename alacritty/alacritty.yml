@@ -8,6 +8,7 @@ env:
   TERM: xterm-256color
 
 window:
+<<<<<<< HEAD
   # Window padding (changes require restart)
   #
   # Blank space added around the window in pixels. This padding is scaled
@@ -45,18 +46,48 @@ colors:
     magenta: '0xb48ead'
     cyan:    '0x88c0d0'
     white:   '0xe5e9f0'
+=======
+  # Window dimensions (changes require restart)
+  #
+  # Number of lines/columns (not pixels) in the terminal. The number of columns
+  # must be at least `2`, while using a value of `0` for columns and lines will
+  # fall back to the window manager's recommended size.
+  #dimensions:
+  #  columns: 0
+  #  lines: 0
 
-  # Bright colors
-  bright:
-    black:   '0x4c566a'
-    red:     '0xbf616a'
-    green:   '0xa3be8c'
-    yellow:  '0xebcb8b'
-    blue:    '0x81a1c1'
-    magenta: '0xb48ead'
-    cyan:    '0x88c0d0'
-    white:   '0x8fbcbb'
+  # Window position (changes require restart)
+  #
+  # Specified in number of pixels.
+  # If the position is not set, the window manager will handle the placement.
+  #position:
+  #  x: 0
+  #  y: 0
+  
+  # Window decorations
+  #
+  # Values for `decorations`:
+  #     - full: Borders and title bar
+  #     - none: Neither borders nor title bar
+  #
+  # Values for `decorations` (macOS only):
+  #     - transparent: Title bar, transparent background and title bar buttons
+  #     - buttonless: Title bar, transparent background and no title bar buttons
+  decorations: full
+>>>>>>> 65b3ec9 (Change alacritty theme to OneDark)
 
+  # Startup Mode (changes require restart)
+  #
+  # Values for `startup_mode`:
+  #   - Windowed
+  #   - Maximized
+  #   - Fullscreen
+  #
+  # Values for `startup_mode` (macOS only):
+  #   - SimpleFullscreen
+  startup_mode: Maximized
+
+<<<<<<< HEAD
   indexed_colors:
     - { index: 16, color: '0xd08770' }
     - { index: 17, color: '0x5e81ac' }
@@ -67,46 +98,101 @@ colors:
 
 # Base16 OneDark 256 - alacritty color config
 # # Lalit Magant (http://github.com/tilal6991)
+=======
+  # Window padding (changes require restart)
+  #
+  # Blank space added around the window in pixels. This padding is scaled
+  # by DPI and the specified value is always added at both opposing sides.
+  padding:
+    x: 4
+    y: 4
+
+# Base16 Nord 256 - alacritty color config
+# arcticicestudio
+>>>>>>> 65b3ec9 (Change alacritty theme to OneDark)
 # colors:
 #   # Default colors
 #   primary:
-#     background: '0x282c34'
-#     foreground: '0xabb2bf'
+#     background: '0x2e3440'
+#     foreground: '0xe5e9f0'
 
 #   # Colors the cursor will use if `custom_cursor_colors` is true
 #   cursor:
-#     text: '0x282c34'
-#     cursor: '0xabb2bf'
+#     text: '0x2e3440'
+#     cursor: '0xe5e9f0'
 
 #   # Normal colors
 #   normal:
-#     black:   '0x282c34'
-#     red:     '0xe06c75'
-#     green:   '0x98c379'
-#     yellow:  '0xe5c07b'
-#     blue:    '0x61afef'
-#     magenta: '0xc678dd'
-#     cyan:    '0x56b6c2'
-#     white:   '0xabb2bf'
+#     black:   '0x2e3440'
+#     red:     '0xbf616a'
+#     green:   '0xa3be8c'
+#     yellow:  '0xebcb8b'
+#     blue:    '0x81a1c1'
+#     magenta: '0xb48ead'
+#     cyan:    '0x88c0d0'
+#     white:   '0xe5e9f0'
 
 #   # Bright colors
 #   bright:
-#     black:   '0x545862'
-#     red:     '0xe06c75'
-#     green:   '0x98c379'
-#     yellow:  '0xe5c07b'
-#     blue:    '0x61afef'
-#     magenta: '0xc678dd'
-#     cyan:    '0x56b6c2'
-#     white:   '0xc8ccd4'
+#     black:   '0x4c566a'
+#     red:     '0xbf616a'
+#     green:   '0xa3be8c'
+#     yellow:  '0xebcb8b'
+#     blue:    '0x81a1c1'
+#     magenta: '0xb48ead'
+#     cyan:    '0x88c0d0'
+#     white:   '0x8fbcbb'
 
 #   indexed_colors:
-#     - { index: 16, color: '0xd19a66' }
-#     - { index: 17, color: '0xbe5046' }
-#     - { index: 18, color: '0x353b45' }
-#     - { index: 19, color: '0x3e4451' }
-#     - { index: 20, color: '0x565c64' }
-#     - { index: 21, color: '0xb6bdca' }
+#     - { index: 16, color: '0xd08770' }
+#     - { index: 17, color: '0x5e81ac' }
+#     - { index: 18, color: '0x3b4252' }
+#     - { index: 19, color: '0x434c5e' }
+#     - { index: 20, color: '0xd8dee9' }
+#     - { index: 21, color: '0xeceff4' }
+
+# Base16 OneDark 256 - alacritty color config
+# # Lalit Magant (http://github.com/tilal6991)
+colors:
+  # Default colors
+  primary:
+    background: '0x282c34'
+    foreground: '0xabb2bf'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '0x282c34'
+    cursor: '0xabb2bf'
+
+  # Normal colors
+  normal:
+    black:   '0x282c34'
+    red:     '0xe06c75'
+    green:   '0x98c379'
+    yellow:  '0xe5c07b'
+    blue:    '0x61afef'
+    magenta: '0xc678dd'
+    cyan:    '0x56b6c2'
+    white:   '0xabb2bf'
+
+  # Bright colors
+  bright:
+    black:   '0x545862'
+    red:     '0xe06c75'
+    green:   '0x98c379'
+    yellow:  '0xe5c07b'
+    blue:    '0x61afef'
+    magenta: '0xc678dd'
+    cyan:    '0x56b6c2'
+    white:   '0xc8ccd4'
+
+  indexed_colors:
+    - { index: 16, color: '0xd19a66' }
+    - { index: 17, color: '0xbe5046' }
+    - { index: 18, color: '0x353b45' }
+    - { index: 19, color: '0x3e4451' }
+    - { index: 20, color: '0x565c64' }
+    - { index: 21, color: '0xb6bdca' }
 
 scrolling:
   history: 50000
@@ -126,6 +212,8 @@ font:
     style: Bold Italic
   
   size: 12
+
+background_opacity: 0.9
 
 # Live config reload (changes require restart)
 live_config_reload: true
