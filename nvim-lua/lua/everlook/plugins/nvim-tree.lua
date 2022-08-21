@@ -4,6 +4,7 @@ if not has_nvim_tree then
 end
 
 nvim_tree.setup({
+    open_on_setup = true,
     diagnostics = {
         enable = true,
     },

@@ -154,7 +154,7 @@ return require('packer').startup({
         use({
             'jose-elias-alvarez/null-ls.nvim',
             config = function()
-                require('everlook.plugins.null-ls')
+                require('everlook.plugins.lsp.null-ls')
             end,
         })
 
