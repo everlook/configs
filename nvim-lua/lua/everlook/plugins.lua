@@ -96,6 +96,21 @@ return require('packer').startup({
             end,
         })
 
+        packer.use({
+            'glepnir/dashboard-nvim',
+            config = function()
+                require('everlook.plugins.dashboard')
+            end,
+        })
+
+        -- use({
+        --     'goolord/alpha-nvim',
+        --     requires = { 'kyazdani42/nvim-web-devicons' },
+        --     config = function ()
+        --         require('alpha').setup(require('alpha.themes.dashboard').config)
+        --     end
+        -- })
+
         -- editing
         use({
             'numToStr/Comment.nvim',
@@ -108,7 +123,7 @@ return require('packer').startup({
         use({
             'windwp/nvim-autopairs',
             config = function()
-                require("nvim-autopairs").setup()
+                require('nvim-autopairs').setup()
             end,
         })
 
@@ -154,7 +169,7 @@ return require('packer').startup({
         use({
             'jose-elias-alvarez/null-ls.nvim',
             config = function()
-                require('everlook.plugins.null-ls')
+                require('everlook.plugins.lsp.null-ls')
             end,
         })
 
