@@ -17,8 +17,8 @@ local flags = {
 local capabilities = cmp_nvim.update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 local custom_attach = function(client, bufnr)
-    client.resolved_capabilities.document_formatting = false
-    client.resolved_capabilities.document_range_formatting = false
+    client.server_capabilities.document_formatting = false
+    client.server_capabilities.document_range_formatting = false
     vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = 0 })
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = 0 })
     vim.keymap.set("n", "gT", vim.lsp.buf.type_definition, { buffer = 0 })

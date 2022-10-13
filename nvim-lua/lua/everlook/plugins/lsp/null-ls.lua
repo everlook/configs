@@ -9,17 +9,17 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 null_ls.setup({
     sources = {
         formatting.prettier,
-        formatting.gofmt,
+        -- formatting.gofmt,
         formatting.shfmt,
         formatting.clang_format,
         formatting.cmake_format,
-        formatting.rustfmt,
-        formatting.lua_format.with({
-            extra_args = {
-                '--no-keep-simple-function-one-line', '--no-break-after-operator', '--column-limit=100',
-                '--break-after-table-lb', '--indent-width=2'
-            }
-        }),
+        -- formatting.rustfmt,
+        -- formatting.lua_format.with({
+        --     extra_args = {
+        --         '--no-keep-simple-function-one-line', '--no-break-after-operator', '--column-limit=100',
+        --         '--break-after-table-lb', '--indent-width=2'
+        --     }
+        -- }),
         formatting.isort, formatting.codespell.with({ filetypes = { 'markdown' } })
     },
     on_attach = function(client, bufnr)
@@ -30,7 +30,8 @@ null_ls.setup({
                 buffer = bufnr,
                 callback = function()
                     -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-                    vim.lsp.buf.formatting_sync()
+                    vim.lsp.buf.format({ bufnr = bufnr })
+                    -- vim.lsp.buf.formatting_sync()
                 end,
             })
         end
