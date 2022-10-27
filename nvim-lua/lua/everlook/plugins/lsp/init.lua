@@ -14,7 +14,7 @@ local flags = {
     debounce_text_changes = 200,
 }
 
-local capabilities = cmp_nvim.update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = cmp_nvim.default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 local custom_attach = function(client, bufnr)
     client.server_capabilities.document_formatting = false
