@@ -14,19 +14,23 @@ local flags = {
     debounce_text_changes = 200,
 }
 
-local capabilities = cmp_nvim.update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = cmp_nvim.default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 local custom_attach = function(client, bufnr)
-    client.server_capabilities.document_formatting = false
-    client.server_capabilities.document_range_formatting = false
-    vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = 0 })
-    vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = 0 })
-    vim.keymap.set("n", "gT", vim.lsp.buf.type_definition, { buffer = 0 })
-    vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { buffer = 0 })
-    vim.keymap.set("n", "<leader>dj", vim.diagnostic.goto_next, { buffer = 0 })
-    vim.keymap.set("n", "<leader>dk", vim.diagnostic.goto_prev, { buffer = 0 })
-    vim.keymap.set("n", "<leader>dl", "<cmd>Telescope diagnostics<cr>", { buffer = 0 })
-    vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, { buffer = 0 })
+    local bufopts = { noremap = true, silent = true, buffer = bufnr }
+
+    -- client.server_capabilities.document_formatting = false
+    -- client.server_capabilities.document_range_formatting = false
+    vim.keymap.set("n", "K", vim.lsp.buf.hover, bufopts)
+    vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
+    vim.keymap.set("n", "gT", vim.lsp.buf.type_definition, bufopts)
+    vim.keymap.set("n", "gi", vim.lsp.buf.implementation, bufopts)
+    vim.keymap.set("n", "<leader>dj", vim.diagnostic.goto_next, bufopts)
+    vim.keymap.set("n", "<leader>dk", vim.diagnostic.goto_prev, bufopts)
+    vim.keymap.set("n", "<leader>dl", "<cmd>Telescope diagnostics<cr>", bufopts)
+    vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, bufopts)
+    vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
+    vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
 end
 
 lsp.rust_analyzer.setup({
