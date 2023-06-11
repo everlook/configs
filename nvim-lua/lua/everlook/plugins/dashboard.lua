@@ -1,6 +1,6 @@
-local db = require('dashboard')
+local has_db, db = pcall(require, 'dashboard')
+if not has_db then
+    return
+end
 
-db.custom_center = {
-  {icon = '  ', desc = 'Find Files          ', shortcut = 'SPC f f',  action = 'Telescope find_files'},
-  {icon = '  ', desc = 'File Browser        ', shortcut = 'SPC t o', action = 'NvimTreeOpen'},
-}
+db.setup({})

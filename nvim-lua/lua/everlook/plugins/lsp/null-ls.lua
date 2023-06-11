@@ -13,7 +13,9 @@ null_ls.setup({
         formatting.shfmt,
         formatting.clang_format,
         formatting.cmake_format,
-        formatting.rustfmt,
+        formatting.rustfmt.with({
+            extra_args = { "--edition=2021" }
+        }),
         formatting.lua_format.with({
             extra_args = {
                 '--no-keep-simple-function-one-line', '--no-break-after-operator', '--column-limit=100',

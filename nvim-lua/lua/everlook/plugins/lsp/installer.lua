@@ -7,6 +7,6 @@ nvim_lsp_installer.setup({
     ensure_installed = {
         'rust_analyzer',
         'golps',
-        'sumneko_lua',
+        -- 'lua_ls',
     },
 })
